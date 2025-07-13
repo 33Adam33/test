@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>3D Model with Info Tablets</title>
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .background-3d {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .info-tablet {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      width: 200px;
+      transition: transform 0.2s ease;
+      cursor: pointer;
+      z-index: 1;
+    }
+
+    .info-tablet:hover {
+      transform: scale(1.05);
+    }
+
+    /* Example tablet positions */
+    #tablet1 {
+      top: 20%;
+      left: 10%;
+    }
+
+    #tablet2 {
+      bottom: 25%;
+      right: 15%;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- 3D Model Background -->
+  <iframe class="background-3d" src="https://your-3d-model-url.com" frameborder="0"></iframe>
+
+  <!-- Info Tablets -->
+  <div id="tablet1" class="info-tablet">
+    <h3>Info Point 1</h3>
+    <p>This describes part of the 3D model.</p>
+  </div>
+
+  <div id="tablet2" class="info-tablet">
+    <h3>Info Point 2</h3>
+    <p>Click here to learn more.</p>
+  </div>
+</div>
+
+</body>
+</html>
